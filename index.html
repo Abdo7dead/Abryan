@@ -617,6 +617,7 @@ html.tab-hidden .mq-track{animation-play-state:paused}
 .proj[data-youtube-id] .proj-thumb{background-position:center !important;background-size:cover !important;background-repeat:no-repeat !important;background-color:#08090e}
 .proj[data-youtube-id] .proj-thumb::before{content:"";position:absolute;inset:-18px;z-index:0;background-image:inherit;background-position:center;background-size:cover;background-repeat:no-repeat;filter:blur(18px) brightness(.38) saturate(1.15);transform:scale(1.08)}
 .proj[data-youtube-id] .proj-thumb .thumb-fit{position:absolute;inset:0;z-index:1;display:block;background-image:inherit;background-position:center;background-size:contain;background-repeat:no-repeat}
+.proj[data-cat="short"][data-youtube-id] .proj-thumb .thumb-fit{background-size:cover,auto 140%}
 .proj[data-youtube-id] .proj-thumb::after{z-index:2}
 .proj-info h3{max-width:19ch;font-size:clamp(22px,2.2vw,27px);line-height:1.12;font-weight:850;letter-spacing:-.025em;text-wrap:balance;text-shadow:0 1px 0 rgba(255,255,255,.12),0 3px 0 rgba(0,0,0,.22),0 8px 20px rgba(0,0,0,.9)}
 .proj-info p{color:#d2d7e4;text-shadow:0 2px 8px rgba(0,0,0,.88)}
@@ -1058,12 +1059,6 @@ html[data-logo-intro="1"] .logo-mark-wrap{animation:logoEntrance 1.3s cubic-bezi
 .filter[aria-pressed="true"]{box-shadow:0 0 17px rgba(120,160,255,.26)}
 @media(max-width:700px){.filters{align-items:center;justify-content:flex-start;width:100%}.filter-button-row{justify-content:flex-start}.filter-hint{font-size:10.5px}}
 
-/* Clear placeholders for the two short-form videos awaiting links. */
-#bento .asset-pending{cursor:default!important;background:linear-gradient(150deg,rgba(78,168,255,.12),rgba(154,123,255,.07) 55%,rgba(255,255,255,.025))}
-#bento .asset-pending .proj-thumb{position:absolute;inset:0;background:radial-gradient(80% 85% at 80% 15%,rgba(154,123,255,.18),transparent 70%),linear-gradient(150deg,rgba(78,168,255,.08),transparent 68%);pointer-events:none}
-#bento .asset-pending .proj-info{position:relative;z-index:3}
-#bento .asset-pending h3{font-size:clamp(16px,1.4vw,20px);color:var(--muted);font-weight:650}
-
 /* YouTuber portraits fill their circles; Goonsville keeps its natural crop. */
 .marquee .mq-item .mq-avatar{position:relative;display:block;flex:0 0 42px;width:42px;height:42px;min-width:42px;min-height:42px;aspect-ratio:1;overflow:hidden;border-radius:50%;clip-path:circle(50%);padding:0;isolation:isolate}
 .marquee .mq-item .mq-avatar>img{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;min-width:100%!important;min-height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center!important;border-radius:50%!important;transform:translateX(2px) scale(1.26)!important;transform-origin:center!important}
@@ -1221,12 +1216,13 @@ section:not(.hero) .h2,.final h2{text-shadow:0 0 18px rgba(154,123,255,.08),0 0 
       <div class="proj-info"><div class="proj-labels"><span class="proj-tag tag-blue"><i></i>Long-form</span><span class="view-chip" aria-label="3,760,550 views"><span class="view-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span><span>3.76M</span></span></div><h3>Crime Breakdown</h3><p>A fast-moving police encounter story built around the trooper’s decisive response and clear moment-to-moment context.</p></div>
     </article>
 
-<article class="proj span2 glass asset-pending" data-cat="short" data-pending-video="true" aria-label="Short-form video link pending">
-      <div class="proj-thumb" aria-hidden="true"></div>
+<article data-cursor="↗ WATCH" class="proj span2 glass rv" data-cat="short" data-youtube-id="TwQTQvTEWpw" data-video-role="Short-form editor" data-video-brief="A creator story about the month behind one standout 600K milestone.">
+      <div class="proj-thumb" style="background-image:linear-gradient(160deg,rgba(8,9,14,.08),rgba(8,9,14,.45)),url('https://i.ytimg.com/vi/TwQTQvTEWpw/hqdefault.jpg');background-position:center;background-size:cover"><span class="thumb-fit" aria-hidden="true"></span></div>
       <div class="proj-glow"></div>
       <div class="proj-info">
         <span class="proj-tag tag-green"><i></i>Short-form</span>
-        <h3>Video link pending</h3>
+        <h3>600K in One Month</h3>
+        <p>A creator story about the month behind one standout 600K milestone.</p>
       </div>
     </article>
 
@@ -1244,12 +1240,13 @@ section:not(.hero) .h2,.final h2{text-shadow:0 0 18px rgba(154,123,255,.08),0 0 
       <div class="proj-info"><div class="proj-labels"><span class="proj-tag tag-blue"><i></i>Long-form</span></div><h3>Football Documentary</h3><p>Eight football turning points show how one decision or moment can redirect a club, a career or the sport itself.</p></div>
     </article>
 
-<article class="proj span2 glass asset-pending" data-cat="short" data-pending-video="true" aria-label="Short-form video link pending">
-      <div class="proj-thumb" aria-hidden="true"></div>
+<article data-cursor="↗ WATCH" class="proj span2 glass rv" data-cat="short" data-youtube-id="7MR3lwuJP14" data-video-role="Short-form editor" data-video-brief="A quick Roblox warning about a scam in 99 Nights, supported by gameplay and clear on-screen cues.">
+      <div class="proj-thumb" style="background-image:linear-gradient(160deg,rgba(8,9,14,.08),rgba(8,9,14,.45)),url('https://i.ytimg.com/vi/7MR3lwuJP14/hqdefault.jpg');background-position:center;background-size:cover"><span class="thumb-fit" aria-hidden="true"></span></div>
       <div class="proj-glow"></div>
       <div class="proj-info">
         <span class="proj-tag tag-violet"><i></i>Short-form</span>
-        <h3>Video link pending</h3>
+        <h3>99 Nights Scammers</h3>
+        <p>A Roblox short that flags a scam in 99 Nights and shows players what to watch for.</p>
       </div>
     </article>
 
@@ -2135,10 +2132,6 @@ section:not(.hero) .h2,.final h2{text-shadow:0 0 18px rgba(154,123,255,.08),0 0 
     if(lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
   }
   caseProjects.forEach(function(project){
-    if(project.hasAttribute("data-pending-video")){
-      project.setAttribute("aria-label","Short-form video link pending");
-      return;
-    }
     project.addEventListener("click", function(e){
       if(e.target.closest("a,button")) return;
       openCase(project);
